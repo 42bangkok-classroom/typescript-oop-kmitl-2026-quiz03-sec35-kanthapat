@@ -14,12 +14,12 @@ export class Person {
        
     }
 
-    setAge(age:number) {
-        return this._age = age;
+    set setAge(age:number) {
+        this._age = age;
     }
 
-    getAge() {
-        console.log(this._age);
+    get getAge() {
+        return this._age
     }
 
     getFullName() {

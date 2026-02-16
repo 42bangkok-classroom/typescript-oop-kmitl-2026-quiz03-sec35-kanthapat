@@ -5,8 +5,13 @@ export class Person {
     static COUNTRY: string = 'Thailand';
 
     constructor(firstname?: string, lastname?: string) {
-        this.firstname = firstname;
-        this.lastname = lastname;
+        if(firstname) {
+            this.firstname = firstname;
+        }
+        if(lastname) {
+            this.lastname = lastname;
+        }
+       
     }
 
     setAge(age:number) {
@@ -18,6 +23,6 @@ export class Person {
     }
 
     getFullName() {
-        console.log(`${this.firstname} ${this.lastname}`)
+        return (`${this.firstname} ${this.lastname}`)
     }
 }
